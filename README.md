@@ -68,7 +68,7 @@ Extracurricular website is still in development. Located at https://ekskul.osiss
 
 Access the template [here](https://github.com/osissman3bdg/website/blob/main/osissman3bdg-ekskul.xml "here").
 
-## Work Programs Website
+## Work Program Websites
 In the future as every year we switch to a new generation, an additional sub-subdomain will be added to the former batch/generation. Such as [lxvii.(work_program_name).osissman3bdg.org](https://lxvii.proker.osissman3bdg.org "lxvii.proker.osissman3bdg.org") for batch LXVII (67) and so on. The new generation still use the main subdomain for their work program list. Our work programs website portal located at [proker.osissman3bdg.org](http://proker.osissman3bdg.org "proker.osissman3bdg.org").
 
 ### PLiST
