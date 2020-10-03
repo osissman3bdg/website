@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'> 
+
+  <head>
+    <meta content='IE=EmulateIE7' http-equiv='X-UA-Compatible'/> 
+    <b:if cond='data:blog.isMobile'> 
+      <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport'/> 
+    <b:else/> 
+      <meta content='width=1100' name='viewport'/> 
+    </b:if> 
+    <b:include data='blog' name='all-head-content'/> 
+	<link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
+    <title><data:blog.pageTitle/></title>
+
+   <b:skin><![CDATA[/*
+/* Style Settings */
+
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+:root {
+    --font: 'Karla', 'Karla', sans-serif;
+}
+
+body {
+    background-color: #22202B;
+}
+
+#userPhoto {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 35px auto 20px;
+}
+
+#userName {
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25;
+    display: block;
+    font-family: var(--font);
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
+#links {
+    max-width: 675px;
+    width: auto;
+    display: block;
+    margin: 27px auto;
+}
+
+@media only screen and (max-width: 700px) {
+	#links{
+		margin-left:3%;
+		margin-right:3%;
+	}
+	.night_mode {
+		margin-right:40%;
+	}
+}
+
+.link {
+    display: block;
+    background-color: rgb(92, 92, 92);
+    color: #fff;
+    font-family: var(--font);
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 17px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all .25s cubic-bezier(.08, .59, .29, .99);
+    border: solid var(--accentColor) 2px;
+}
+
+.link:hover {
+    background-color: #fff;
+    color: rgb(92, 92, 92);
+    border: solid rgb(92, 92, 92) 2px;
+}
+
+#proker {
+    max-width: 300px;
+    width: auto;
+    display: grid;
+    margin: 27px auto;
+}
+
+.footer {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.footer a {
+    text-decoration:none;
+}
+
+.circulo {
+    background: rgb(221, 221, 221);
+    border-radius: 52px;
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    font-size: 10px;
+    color: rgb(32, 32, 32);
+	transition: all .25s cubic-bezier(.08, .59, .29, .99);
+	margin-bottom: 40px;
+}
+
+.circulo:hover {
+    background: rgb(92, 92, 92);
+    color: rgb(255, 255, 255);
+}
+
+.night_mode {
+    position: fixed;
+    top: 25px;
+    right: 30px;
+    z-index: 10000000;
+    color: #fff;
+}
+
+.night_mode:hover {
+    cursor: pointer;
+}
+
+]]></b:skin>
+   
+  </head>
+
+  <body>
+<b:section class='navbar' id='navbar' maxwidgets='1' showaddelement='no'/>
+
+    <img alt='User Photo' id='userPhoto' src='https://i.imgur.com/1LwSje3.png'/>
+
+    <spam id='userName'>World Tournament 2020: Sacramentum</spam>
+
+    <div id='links'>
+        <a class='link' href='https://bit.ly/PreEventWT2020' style='border-radius: 25px;' target='_blank'><i aria-hidden='true' class='fa fa-file-video-o'/>&#160;&#160;Pre-Event WT 2020 Submission</a>
+        <a class='link' href='https://jalantikus.com/tips/cara-mengecilkan-ukuran-video-tanpa-mengurangi-kualitas/' style='border-radius: 25px;' target='_blank'><i aria-hidden='true' class='fa fa-hdd-o'/>&#160;&#160;Tutorial: Compressing Video Size</a>
+      	<a class='link' href='https://drive.google.com/file/d/1LlEeTF7qX39zNaTKBL-pen4D1Z_XKACH/view?usp=sharing/' style='border-radius: 25px;' target='_blank'><i aria-hidden='true' class='fa fa-upload'/>&#160;&#160;Tutorial: Upload File to Google Drive</a>
+    </div>
+
+    <div class='footer'>
+        <a href='https://www.osissman3bdg.org/' target='_blank'>
+            <i aria-hidden='true' class='fa fa-globe circulo' style='line-height: 38px;'/>
+        </a>
+        <a href='mailto:lxvii.osissman3bdg@gmail.com' target='_blank'>
+            <i aria-hidden='true' class='fa fa-envelope-o circulo' style='line-height: 38px;'/>
+        </a>
+        <a href='https://bit.ly/30EwTsw'>
+            <i aria-hidden='true' class='fa fa-comments-o circulo' style='line-height: 38px;'/>
+        </a>
+      <a href='https://bit.ly/2XJKdKr' target='_blank'>
+            <i aria-hidden='true' class='fa fa-instagram circulo' style='line-height: 38px;'/>
+        </a>
+    </div>
+
+    <!-- Javascript -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'/>
+    <script type='text/javascript'>
+//<![CDATA[
+	//]]></script>
+  </body> 
+</html>

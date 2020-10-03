@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'> 
+
+  <head>
+    <meta content='IE=EmulateIE7' http-equiv='X-UA-Compatible'/> 
+    <b:if cond='data:blog.isMobile'> 
+      <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport'/> 
+    <b:else/> 
+      <meta content='width=1100' name='viewport'/> 
+    </b:if> 
+    <b:include data='blog' name='all-head-content'/> 
+	<link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
+    <title><data:blog.pageTitle/></title>
+    <link href='https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css' rel='stylesheet'/>
+
+   <b:skin><![CDATA[/*
+/* Style Settings */
+
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+:root {
+    --font: 'Karla', 'Karla', sans-serif;
+}
+
+body {
+    background-color: #0a072e;
+}
+
+#userPhoto {
+    width: 96px;
+    height: 96px;
+    display: block;
+    margin: 35px auto 20px;
+	-webkit-box-shadow: 0px 6px 0px 0px rgba(222, 218, 162,1);
+	-moz-box-shadow: 0px 6px 0px 0px rgba(222, 218, 162,1);
+	box-shadow: 0px 6px 0px 0px rgba(222, 218, 162,1);
+}
+
+#userPhoto:hover {
+	box-shadow: 0px 8px rgba(222, 218, 162,1);
+	position: relative;
+	top: -2px;
+}
+
+#userPhoto:active {
+	box-shadow: 0px 0px black;
+	position: relative;
+	top: 6px;
+}
+
+#userName {
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25;
+    display: block;
+    font-family: var(--font);
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
+#links {
+    max-width: 675px;
+    width: auto;
+    display: block;
+    margin: 27px auto;
+}
+
+@media only screen and (max-width: 700px) {
+	#links{
+		margin-left:3%;
+		margin-right:3%;
+	}
+	.night_mode {
+		margin-right:40%;
+	}
+}
+
+.link {
+    display: block;
+    background-color: #01A79B;
+    color: #fff;
+    font-family: var(--font);
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 17px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transitionzzz: all .25s cubic-bezier(.08, .59, .29, .99);
+	box-shadow: 0px 6px #007569;
+}
+
+.link:hover {
+	/* background: #019489; */
+	box-shadow: 0px 8px #007569;
+	position: relative;
+	top: -2px;
+}
+
+.link:active {
+	position: relative;
+	top: 6px;
+	box-shadow: 0px 0px #007569;
+}
+
+#proker {
+    max-width: 300px;
+    width: auto;
+    display: grid;
+    margin: 27px auto;
+}
+
+.footer {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.footer a {
+    text-decoration:none;
+}
+
+.circulo {
+    background: #DD5A79;
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    font-size: 10px;
+    color: white;
+	margin-bottom: 40px;
+	box-shadow: 0px 6px #9E4355;
+}
+
+.circulo:hover {
+	box-shadow: 0px 8px #9E4355;
+	position: relative;
+	top: -2px;
+}
+
+.circulo:active {
+	position: relative;
+	top:6px;
+	box-shadow: 0px 0px #9E4355;
+}
+
+.night_mode {
+    position: fixed;
+    top: 25px;
+    right: 30px;
+    z-index: 10000000;
+    color: #fff;
+}
+
+.night_mode:hover {
+    cursor: pointer;
+}
+
+]]></b:skin>
+   
+  </head>
+
+  <body>
+<b:section class='navbar' id='navbar' maxwidgets='1' showaddelement='no'/>
+
+    <img alt='User Photo' id='userPhoto' src='https://1.bp.blogspot.com/-v4Yi0oSR0-c/X1YRNalQZLI/AAAAAAAAA6U/xMnEQKBDgPgKFXQONoHthgMbQ91QURBlACLcBGAsYHQ/s0/technopreneur.jpg'/>
+
+    <spam id='userName'>Technofest x Entrepreneurship Workshop 2020</spam>
+
+    <div id='links'>
+        <a class='link' href='https://bit.ly/FotografiTechnofest' target='_blank'><i aria-hidden='true' class='fa fa-camera'/>&#160;&#160;Photography Submission</a>
+        <a class='link' href='https://discord.gg/mwb32hc' target='_blank'><i aria-hidden='true' class='ri-discord-fill'/>&#160;&#160;Discord Server</a>
+      	
+        <a class='link' href='https://us02web.zoom.us/j/86493489649?pwd=RElYa1lPR0FaaitqRXU4M3p6ZHhQQT09' target='_blank'><i aria-hidden='true' class='fa fa-video-camera'/>&#160;&#160;Zoom Webinar Room</a>
+    </div>
+
+    <div class='footer'>
+        <a href='https://www.osissman3bdg.org/' target='_blank'>
+            <i aria-hidden='true' class='fa fa-globe circulo' style='line-height: 38px;'/>
+        </a>
+        <a href='mailto:lxvii.osissman3bdg@gmail.com' target='_blank'>
+            <i aria-hidden='true' class='fa fa-envelope-o circulo' style='line-height: 38px;'/>
+        </a>
+        <a href='https://bit.ly/30EwTsw'>
+            <i aria-hidden='true' class='fa fa-comments-o circulo' style='line-height: 38px;'/>
+        </a>
+      <a href='https://www.instagram.com/technopreneurday/' target='_blank'>
+            <i aria-hidden='true' class='fa fa-instagram circulo' style='line-height: 38px;'/>
+        </a>
+    </div>
+
+    <!-- Javascript -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'/>
+    <script type='text/javascript'>
+//<![CDATA[
+	//]]></script>
+  </body> 
+</html>
