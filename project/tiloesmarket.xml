@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'> 
+
+  <head>
+    <meta content='IE=EmulateIE7' http-equiv='X-UA-Compatible'/> 
+    <b:if cond='data:blog.isMobile'> 
+      <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport'/> 
+    <b:else/> 
+      <meta content='width=1100' name='viewport'/> 
+    </b:if> 
+    <b:include data='blog' name='all-head-content'/> 
+	<link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
+    <title><data:blog.pageTitle/></title>
+
+   <b:skin><![CDATA[/*
+/* Style Settings */
+@import url('https://fonts.googleapis.com/css?family=Modak&display=swap');
+:root {
+    --bgColor: #EFE7DC;
+    --accentColor: #363534;
+    --font: 'Modak', cursive;
+}
+
+.body1212{
+    background-color: var(--bgColor);
+}
+
+body {
+  background-image: url('https://mk-website-media.s3.amazonaws.com/wp-content/uploads/2018/10/19001752/Wallpaper-IngridMika-ContactGrid55-1-1100x1318.jpg');
+  background-size: 15%;
+}
+
+#userPhoto{
+    width: 96px;
+    height: 96px;
+    display: block;
+    margin: 35px auto 20px;
+    border-radius: 15px;
+}
+
+#userName{
+    color: #2577C1;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.25;
+    display: block;
+    font-family: var(--font);
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 3px 3px 0 var(--accentColor), 1px 1px 0 var(--accentColor), 2px 2px 0 var(--accentColor);
+}
+
+#links{
+    max-width: 675px;
+    width: auto;
+    display: block;
+    margin: 27px auto;
+}
+.link{
+    display: block;
+    background-color: var(--accentColor);
+    color: var(--bgColor);
+    font-family: var(--font);
+    text-align: center;
+    margin-bottom: 20px;
+	margin-left:3%;
+	margin-right:3%;
+    padding: 17px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: all .25s cubic-bezier(.08,.59,.29,.99);
+    border: solid var(--accentColor) 2px;
+    border-radius: 15px;
+}
+
+.link:hover{
+    background-color: var(--bgColor);
+    color: var(--accentColor);
+}
+
+]]></b:skin>
+   
+  </head>
+
+  <body>
+<b:section class='navbar' id='navbar' maxwidgets='1' showaddelement='no'/>
+    <img alt='User Photo' id='userPhoto' src='https://1.bp.blogspot.com/-VQoODn00Gmw/XyT1x4YAsNI/AAAAAAAAA1E/JP-OjyLsIMMKfk5j316nuaCP1UkS6eW7QCLcBGAsYHQ/s640/market.png'/>
+    
+    <a href='https://www.instagram.com/tiloesmarket' id='userName'>Tiloes Market</a>
+    <div id='links'>
+        <a class='link' href='https://www.instagram.com/tiloesmarket/' target='_blank'>Catalog</a>
+        <a class='link' href='https://lin.ee/c7k37Vk' target='_blank'>Order via LINE</a>
+      	<a class='link' href='https://wa.me/6281221629128' target='_blank'>Order via WhatsApp</a>
+    </div>
+
+    <!-- Javascript -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'/>
+    <script type='text/javascript'>
+//<![CDATA[
+
+	//]]></script>
+  </body> 
+</html>
