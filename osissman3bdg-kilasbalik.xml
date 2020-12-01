@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'> 
+
+  <head>
+    <meta content='IE=EmulateIE7' http-equiv='X-UA-Compatible'/> 
+    <b:if cond='data:blog.isMobile'> 
+      <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport'/> 
+    <b:else/> 
+      <meta content='width=1100' name='viewport'/> 
+    </b:if> 
+    <b:include data='blog' name='all-head-content'/> 
+	<link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
+    <link href='sweetalert2.min.css' rel='stylesheet'/>
+    <title><data:blog.pageTitle/></title>
+
+   <b:skin><![CDATA[/*
+/* Style Settings */
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+:root {
+    --bgColor:#1C1C1C;
+    --accentColor: #E6E6E6;
+    --font: 'Karla'
+}
+
+body{
+    background-color: var(--bgColor);
+}
+
+#userPhoto{
+    width: 110px;
+    height: 110px;
+    display: block;
+    margin: 35px auto 20px;
+    border-radius: 50%;
+}
+
+#userName{
+    color: #bbb;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25;
+    display: block;
+    font-family: var(--font);
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
+#links{
+    max-width: 675px;
+    width: auto;
+    display: block;
+    margin: 27px auto;
+}
+.link{
+    display: block;
+    background-color: var(--accentColor);
+    color: var(--bgColor);
+    font-family: var(--font);
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding: 17px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all .25s cubic-bezier(.08,.59,.29,.99);
+    border: solid var(--accentColor) 2px;
+	border-radius: 100px;
+	cursor: pointer;
+}
+
+.link:hover{
+    background-color: var(--bgColor);
+    color: var(--accentColor);
+}
+
+]]></b:skin>
+   
+  </head>
+
+  <body>
+<b:section class='navbar' id='navbar' maxwidgets='1' showaddelement='no'/>
+<img alt='User Photo' id='userPhoto' src='https://1.bp.blogspot.com/-fxA85hY_ewQ/XyUbjth-BtI/AAAAAAAAA1k/_X9za178RNgJEUUuBcGTlmbjU4OKMmSDwCLcBGAsYHQ/s1600/qBOaMUboTda5aLIm92vs_687cfe17d1aefcf49f313be895b8b6c4a.png'/>
+    
+    <a href='#' id='userName'>&#8212; Kilas Balik &#8212;<br/>OSIS SMAN 3 Bandung</a>
+    <div id='links'>
+        <a class='link lxvii'><i aria-hidden='true' class='fa fa-balance-scale'/>&#160;&#160;OSIS LXVII &#8211; Veritas</a>
+    </div>
+
+    <!-- Javascript -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'/>
+    <script src='https://cdn.jsdelivr.net/npm/sweetalert2@10'/>
+    <script src='sweetalert2.min.js'/>
+    <script src='sweetalert2.all.min.js'/>
+	<script src='https://cdn.jsdelivr.net/npm/promise-polyfill'/>
+    <script type='text/javascript'>
+//<![CDATA[
+document.querySelector(".lxvii").addEventListener('click', function(){
+    Swal.fire({
+    title: '<p style="font-family: Karla;"><b>Kilas Balik</b>&nbsp;LXVII</p>',
+    imageUrl: 'https://1.bp.blogspot.com/-fyBGNgnBDQo/XvIb56mMCsI/AAAAAAAANzA/NDr_oOuoYYAKooEDEI6wr5ll7oFt5OY_QCLcBGAsYHQ/s320/LOGO%2BOSIS%2BLXVII%25281%2529.png',
+    imageWidth: 250,
+    html:
+      '<a class="link" href="https://bit.ly/KilasBalikLPJATLXVII" target="_blank">LPJ-AT</a>' +
+      '<a class="link" href="https://bit.ly/KilasBalikCharithree" target="_blank">Charithree</a>' +
+      '<a class="link" href="https://bit.ly/KilasBalikTechnopreneurDay" target="_blank">Technopreneur Day 2020</a>' +
+      '<a class="link" href="https://bit.ly/KilasBalikWT2020" target="_blank">World Tournament 2020: Sacramentum</a>' +
+      '<a class="link" href="https://bit.ly/KilasBalik17Agustus" target="_blank">SEDJAK 45</a>' +
+      '<a class="link" href="https://bit.ly/KilasBalikPeninsula" target="_blank">Demeks 2020: Peninsula</a>' +
+      '<a class="link" href="https://bit.ly/KilasBalikPLiST2020" target="_blank">PLiST 2020</a>' +
+      '<a class="link" href="https://bit.ly/KilasBalikLPJTTLXVII" target="_blank">LPJ-TT LXVII</a>' +
+      '<a class="link" href="https://bit.ly/KilasBalikStubanLXVII" target="_blank">Studi Banding</a>' +
+      '<a class="link" href="https://bit.ly/KilasBalikTNL2020" target="_blank">The Next Leader 2020</a>' +
+      '<a class="link" href="https://bit.ly/KilasBalikDober2020" target="_blank">Doa Bersama 2020</a>' +
+      '<a class="link" href="https://bit.ly/KilasBalikBakdes2020" target="_blank">Bakti Desa 2020</a>' +
+      '<a class="link" href="https://bit.ly/KilasBalikNagbonX" target="_blank">Nagabonar Terharu X</a>' +
+      '<a class="link" href="https://bit.ly/KilasBalikFlowersDay2019" target="_blank">Flowers Day</a>' +
+      '<a class="link" href="https://bit.ly/KilasBalikLKO2019" target="_blank">Latihan Kepengurusan OSIS 2019</a>' +
+      '<a class="link" href="https://bit.ly/KilasBalikDaryaskara" target="_blank">Edupassion 2020: Daryaskara</a>' +
+      '<a class="link" href="https://bit.ly/KilasBalikDewathXII" target="_blank">Dewa Athena XII</a>' +
+      '<a class="link" href="https://bit.ly/KilasBalikSenyumKarena" target="_blank">#SenyumKarena</a>',
+    showCloseButton: true,
+    confirmButtonText: 'Back',
+	confirmButtonColor: '#111111',
+  })
+});
+	//]]></script>
+  </body> 
+</html>
