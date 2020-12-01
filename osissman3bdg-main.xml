@@ -6,7 +6,7 @@
     <meta charset='UTF-8'/>
     <title><data:view.title.escaped/></title>
     <b:include data='blog' name='all-head-content'/>
-	<meta content='sman 3 bandung, sma bandung, osis, osis sman 3 bandung, sma favorit, sekolah menengah atas, sma unggulan, organisasi siswa intra sekolah, student concil' name='keywords'/>
+	<meta content='sman 3 bandung, sma bandung, osis, osis sman 3 bandung, sma favorit, sekolah menengah atas, sma unggulan, organisasi siswa intra sekolah, student council' name='keywords'/>
     <!-- Google Fonts -->
     <link href='//fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,700|Roboto:400,400i,500,500i,700,700i' media='all' rel='stylesheet' type='text/css'/>
     <link href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
@@ -153,12 +153,12 @@ abbr{
     position:relative;
     margin:0 auto
 }
- #catatan-osis{
+ #jurnal-osis{
     overflow:hidden;
     padding:0;
     margin:0 -7px
 }
- .item #catatan-osis{
+ .item #jurnal-osis{
     margin:0;
 float: left;
     overflow: hidden;
@@ -635,7 +635,28 @@ margin:0
  .post-image-link,.comments .avatar-image-container{
     background-color:#f9f9f9
 }
- .post-thumb{
+ #PopularPosts1 .post-thumb{
+    display:block;
+    position:relative;
+    width:100%;
+    height:100%;
+    color:transparent;
+    object-fit:cover;
+    z-index:1;
+    transition:opacity .17s ease;
+	border-radius: 3px;
+}
+ #jurnal-osis .post-thumb{
+    display:block;
+    position:relative;
+    width:100%;
+    height:100%;
+    color:transparent;
+    object-fit:cover;
+    z-index:1;
+    transition:opacity .17s ease;
+}
+ .post-thumb-sidebar{
     display:block;
     position:relative;
     width:100%;
@@ -993,7 +1014,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
  #main-menu{
     position:relative;
     height:68px;
-    z-index:15
+    z-index:15;
 }
  #main-menu ul > li{
     float:left;
@@ -1013,10 +1034,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     text-decoration:none;
     padding:0 10px;
     margin:0 0 0 5px;
-    transition:color .17s
+    transition:color .17s;
 }
  #main-menu #main-menu-nav > li:last-child > a{
-    padding:0 0 0 10px
+    padding:0 0 0 10px;
+	border-radius: 0px 0px 6px 6px;
 }
  #main-menu ul > li > a:hover{
     color:$(main.color)
@@ -1032,7 +1054,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     margin-top:0;
     padding:0;
     visibility:hidden;
-    opacity:0
+    opacity:0;
+	border-radius: 0px 0px 6px 6px;
 }
  #main-menu ul > li > ul > li > ul{
     position:absolute;
@@ -1466,6 +1489,10 @@ box-shadow: 0px 0px 27px -3px rgba(0,0,0,0.3);
     position: relative;
     background: #fff;
     box-sizing: border-box;
+	transition: all 0.25s;
+}
+.author-intro-widgets .right-side-widget .service-content:hover {
+	box-shadow:none;
 }
  .service-title{
     font-size:14px;
@@ -1476,7 +1503,6 @@ box-shadow: 0px 0px 27px -3px rgba(0,0,0,0.3);
 }
 .author-intro-widgets .author-list  .service-title{
 margin:15px 0 10px;
-}
 overflow:hidden;
 }
  .service-snippet{
@@ -1501,9 +1527,15 @@ overflow:hidden;
     font-size:14px;
     margin:0
 }
-#catatan-osis .head-text {
+#jurnal-osis .head-text {
 margin-top:0;
 }
+
+.undraggable {
+	user-drag: none;
+	-webkit-user-drag: none;
+}
+
  #testimonial-wrap{
     display:inline-block;
     float:left;
@@ -1649,6 +1681,15 @@ width:100%;
     padding:0;
     margin:0
 }
+
+.index-post:first-child {
+	border-radius: 10px 0px 0px 0px;
+}
+
+.index-post:last-child {
+	border-radius: 0px 0px 0px 10px;
+}
+
 @media screen and (min-width: 400px) {
  .index-post .post-image-wrap{
   float: left;
@@ -1658,6 +1699,26 @@ width:100%;
 }
 }
 @media screen and (max-width: 400px) {
+.post-title {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.index-post .post-image-wrap{
+  float: none;
+}
+.index-post {
+	position: relative;
+	padding-bottom: 150px;
+	border: 1px solid;
+	border-color: rgba(0, 0, 0, 0.3);
+}
+.index-post .post-info {
+	position: absolute;
+	top: 36vh;
+	padding: 10px;
+}
  .index-post .post-image-wrap{
     width: 100%;
     height: 200px;
@@ -1708,6 +1769,15 @@ position:relative;
 .index-post .post-meta.box-meta .post-date:before{
 display:none;
 }
+
+.index-post:first-child .post-info{
+	border-radius: 0px 10px 0px 0px;
+}
+
+.index-post:last-child .post-info{
+	border-radius: 0px 0px 10px 0px;
+}
+
 @media screen and (min-width: 400px) {
  .index-post .post-info{
  display: block;
@@ -1716,8 +1786,9 @@ display:none;
     padding-top: 20px;
     box-sizing: border-box;
     min-height: 200px;
-    border: 1px dashed #e5e5e5;
+    border: 1px solid #e5e5e5;
     border-left: none;
+	background-color: clearwhite;
 }
 }
  .index-post .post-info > h2{
@@ -1773,7 +1844,7 @@ display:none;
     display: block;
     overflow: hidden;
     font-size: 16px;
-    line-height: 1.6em;
+    line-height: 1.25em;
     font-weight: 400;
     margin-top: 7px;
 	color: #5a5a5a;
@@ -2491,7 +2562,7 @@ text-align:center;
     font-family:FontAwesome;
     font-weight:400
 }
- .error404 #catatan-osis{
+ .error404 #jurnal-osis{
     width:100%!important;
     margin:0!important
 }
@@ -2600,7 +2671,7 @@ text-align:center;
      #content-wrapper > .container{
         margin:0
     }
-.item #catatan-osis,#sidebar-wrapper{
+.item #jurnal-osis,#sidebar-wrapper{
         width:100%;
         padding:0
     }
@@ -2704,6 +2775,25 @@ margin-bottom:10px;
 .index-post .post-meta.box-meta .box-meta-inner {
     position: static;
     top: auto;
+}
+.index-post:first-child .post-info{
+border-radius: 0px 0px 0px 0px;
+}
+.index-post:first-child {
+border-radius: 10px 10px 0px 0px;
+}
+.post-snippet {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.post-date {
+float: left;
+position: absolute;
+}
+.post-tag {
+float:right;
 }
 }
  @media (max-width: 680px) {
@@ -3283,7 +3373,7 @@ body#layout .author-intro-widgets {
     float:none;
     width:auto
 }
- body#layout #catatan-osis{
+ body#layout #jurnal-osis{
    width: 65%;
     padding: 0;
     margin: 0;
@@ -3334,7 +3424,6 @@ var monthFormat = ["January", "February", "March", "April", "May", "June", "July
     noThumbnail = "https://4.bp.blogspot.com/-O3EpVMWcoKw/WxY6-6I4--I/AAAAAAAAB2s/KzC0FqUQtkMdw7VzT6oOR_8vbZO6EJc-ACK4BGAYYCw/s1600/nth.png",
     postPerPage = 8,
     commentsSystem = "blogger",
-    disqusShortname = "soratemplates";
 //]]>
 </script>
 
@@ -3510,11 +3599,11 @@ var monthFormat = ["January", "February", "March", "April", "May", "June", "July
           <b:widget-settings>
             <b:widget-setting name='text-10'>_Yasmanti Foundation</b:widget-setting>
             <b:widget-setting name='link-17'>https://linktr.ee/TigaUntukIndonesia</b:widget-setting>
-            <b:widget-setting name='link-16'>https://www.instagram.com/pksman3bandung/</b:widget-setting>
+            <b:widget-setting name='link-16'>https://pksman3bandung.org/</b:widget-setting>
             <b:widget-setting name='sorting'>NONE</b:widget-setting>
             <b:widget-setting name='link-1'>https://osissman3bdg.blogspot.com/p/osis-lxvii.html</b:widget-setting>
             <b:widget-setting name='link-13'>http://tiloesmarket.osissman3bdg.org</b:widget-setting>
-            <b:widget-setting name='link-2'>https://osissman3bdg.blogspot.com/#catatan-osis</b:widget-setting>
+            <b:widget-setting name='link-2'>https://osissman3bdg.blogspot.com/#jurnal-osis</b:widget-setting>
             <b:widget-setting name='link-12'>http://plist.osissman3bdg.org</b:widget-setting>
             <b:widget-setting name='link-15'>http://www.sman3bdg.sch.id/</b:widget-setting>
             <b:widget-setting name='link-0'>/</b:widget-setting>
@@ -3533,7 +3622,7 @@ var monthFormat = ["January", "February", "March", "April", "May", "June", "July
             <b:widget-setting name='text-1'>Profil</b:widget-setting>
             <b:widget-setting name='text-0'>Home</b:widget-setting>
             <b:widget-setting name='text-3'>Kilas Balik</b:widget-setting>
-            <b:widget-setting name='text-2'>Catatan OSIS</b:widget-setting>
+            <b:widget-setting name='text-2'>Jurnal OSIS</b:widget-setting>
             <b:widget-setting name='text-5'>_Jadwal Pelajaran</b:widget-setting>
             <b:widget-setting name='text-4'>Akademik</b:widget-setting>
             <b:widget-setting name='text-7'>Alumni</b:widget-setting>
@@ -3575,10 +3664,10 @@ var monthFormat = ["January", "February", "March", "April", "May", "June", "July
           <b:widget-settings>
             <b:widget-setting name='displayUrl'>http://4.bp.blogspot.com/-GAYa-O8J-yQ/Xp81VQG92WI/AAAAAAAAAdM/vz85nJWyW9EcV6MIs6YKa3mnjYC7xQZNQCK4BGAYYCw/s1600/HEADER%2BFIX.png</b:widget-setting>
             <b:widget-setting name='displayHeight'>776</b:widget-setting>
-            <b:widget-setting name='sectionWidth'>150</b:widget-setting>
+            <b:widget-setting name='sectionWidth'>790</b:widget-setting>
             <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
             <b:widget-setting name='displayWidth'>1600</b:widget-setting>
-            <b:widget-setting name='link'>#Masa Bakti 2019/2020</b:widget-setting>
+            <b:widget-setting name='link'>#Masa Bakti 2020/2021</b:widget-setting>
             <b:widget-setting name='caption'>Selamat datang di website resmi Organisasi Intra Sekolah SMA Negeri 3 Bandung</b:widget-setting>
           </b:widget-settings>
           <b:includable id='main'>
@@ -3619,12 +3708,12 @@ var monthFormat = ["January", "February", "March", "April", "May", "June", "July
 <b:section id='intro-author-heading' maxwidgets='2' name='Visi' showaddelement='no'>
   <b:widget id='HTML1' locked='false' title='Visi' type='HTML' version='2' visible='true'>
     <b:widget-settings>
-      <b:widget-setting name='content'>Mewujudkan SMA Negeri 3 Bandung yang &lt;span style=&quot;font-weight:bold;&quot;&gt;religius&lt;/span&gt;, &lt;span style=&quot;font-weight:bold;&quot;&gt;berintegritas&lt;/span&gt;, &lt;span style=&quot;font-weight:bold;&quot;&gt;aktif&lt;/span&gt;, dan &lt;span style=&quot;font-weight:bold;&quot;&gt;berprestasi &lt;/span&gt;di tengah situasi yang semakin kompetitif.
+      <b:widget-setting name='content'>Terwujudnya SMA Negeri 3 Bandung yang &lt;span style=&quot;font-weight:bold;&quot;&gt;religius&lt;/span&gt;, &lt;span style=&quot;font-weight:bold;&quot;&gt;integratif&lt;/span&gt;, &lt;span style=&quot;font-weight:bold;&quot;&gt;aktif bergerak dalam hal positif&lt;/span&gt;, dan &lt;span style=&quot;font-weight:bold;&quot;&gt;adaptif.
 &lt;br /&gt;
 &lt;br /&gt;
 &lt;div class=&quot;videoWrapper&quot; style=&quot;border-radius: 10px 10px 10px 10px;&quot;&gt;
     &lt;!-- Copy &amp; Pasted from YouTube --&gt;
-    &lt;iframe border-radius=&quot;10px 10px 10px 10px&quot; width=&quot;560&quot; height=&quot;349&quot; src=&quot;https://www.youtube.com/embed/4Ie3BRB0vC8&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+    &lt;iframe border-radius=&quot;10px 10px 10px 10px&quot; width=&quot;560&quot; height=&quot;349&quot; src=&quot;https://www.youtube.com/embed/do0oDOGM2Po&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 &lt;style&gt;
 .videoWrapper {
@@ -3647,7 +3736,7 @@ height: 100%;
 &lt;a class=&quot;button medium&quot; href=&quot;https://www.osissman3bdg.org/p/osis-lxvii.html&quot;&gt;Pelajari selengkapnya&lt;/a&gt;
 &lt;/div&gt;&lt;/center&gt;
 
-&lt;br /&gt;</b:widget-setting>
+&lt;br /&gt;&lt;/span&gt;</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
 <div class='author-content'>
@@ -3668,11 +3757,11 @@ height: 100%;
      <b:widget-settings>
        <b:widget-setting name='displayUrl'>http://3.bp.blogspot.com/-6p2jJp25oy0/W1JAGXU11UI/AAAAAAAACdw/-TIjB40wBgw1eBFz4lhzmDgAHdHutt9XwCK4BGAYYCw/s1600/service1.png</b:widget-setting>
        <b:widget-setting name='displayHeight'>70</b:widget-setting>
-       <b:widget-setting name='sectionWidth'>150</b:widget-setting>
+       <b:widget-setting name='sectionWidth'>486</b:widget-setting>
        <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
        <b:widget-setting name='displayWidth'>70</b:widget-setting>
        <b:widget-setting name='link'>fa-chevron-up</b:widget-setting>
-       <b:widget-setting name='caption'>Menumbuhkan sikap religius sebagai dasar warga tiga dalam bertindak serta dalam upaya pengembangan akhlak baik.</b:widget-setting>
+       <b:widget-setting name='caption'>Menjadikan sikap religius sebagai pondasi warga tiga dalam berkeyakinan, berucap, bertindak dan membentuk karakter melalui optimalisasi penurunan nilai program kerja OSIS.</b:widget-setting>
      </b:widget-settings>
      <b:includable id='main'>
               <b:include name='content'/>
@@ -3704,11 +3793,11 @@ height: 100%;
      <b:widget-settings>
        <b:widget-setting name='displayUrl'>http://4.bp.blogspot.com/-P9JKL3gNPLw/W1JALZWqyEI/AAAAAAAACd4/CVUxHZ9ol9cPwqTaR-9Rw9tvWmCmIUoiACK4BGAYYCw/s1600/service2.png</b:widget-setting>
        <b:widget-setting name='displayHeight'>70</b:widget-setting>
-       <b:widget-setting name='sectionWidth'>150</b:widget-setting>
+       <b:widget-setting name='sectionWidth'>486</b:widget-setting>
        <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
        <b:widget-setting name='displayWidth'>70</b:widget-setting>
        <b:widget-setting name='link'>fa-heart</b:widget-setting>
-       <b:widget-setting name='caption'>Meningkatkan kepekaan Warga Tiga terhadap lingkungan dan terhadap sesama.</b:widget-setting>
+       <b:widget-setting name='caption'>Membentuk pengurus OSIS yang kompeten dan progresif.</b:widget-setting>
      </b:widget-settings>
      <b:includable id='main'>
               <b:include name='content'/>
@@ -3740,11 +3829,11 @@ height: 100%;
      <b:widget-settings>
        <b:widget-setting name='displayUrl'>http://4.bp.blogspot.com/-P9JKL3gNPLw/W1JALZWqyEI/AAAAAAAACd4/CVUxHZ9ol9cPwqTaR-9Rw9tvWmCmIUoiACK4BGAYYCw/s1600/service2.png</b:widget-setting>
        <b:widget-setting name='displayHeight'>70</b:widget-setting>
-       <b:widget-setting name='sectionWidth'>150</b:widget-setting>
+       <b:widget-setting name='sectionWidth'>486</b:widget-setting>
        <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
        <b:widget-setting name='displayWidth'>70</b:widget-setting>
        <b:widget-setting name='link'>fa-building</b:widget-setting>
-       <b:widget-setting name='caption'>Menciptakan motivasi bagi warga tiga dalam beraktivitas baik dalam bentuk struktural atau nonstruktural.</b:widget-setting>
+       <b:widget-setting name='caption'>Meningkatkan prestasi SMA Negeri 3 Bandung melalui keaktifan dan pengembangan ekstrakurikuler.</b:widget-setting>
      </b:widget-settings>
      <b:includable id='main'>
               <b:include name='content'/>
@@ -3776,11 +3865,11 @@ height: 100%;
      <b:widget-settings>
        <b:widget-setting name='displayUrl'>http://4.bp.blogspot.com/-P9JKL3gNPLw/W1JALZWqyEI/AAAAAAAACd4/CVUxHZ9ol9cPwqTaR-9Rw9tvWmCmIUoiACK4BGAYYCw/s1600/service2.png</b:widget-setting>
        <b:widget-setting name='displayHeight'>70</b:widget-setting>
-       <b:widget-setting name='sectionWidth'>150</b:widget-setting>
+       <b:widget-setting name='sectionWidth'>486</b:widget-setting>
        <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
        <b:widget-setting name='displayWidth'>70</b:widget-setting>
        <b:widget-setting name='link'>fa-group</b:widget-setting>
-       <b:widget-setting name='caption'>Mengaktifkan masing-masing ekstrakurikuler sebagai sarana pengembangan diri dan mengoptimalkan fungsinya masing-masing untuk SMA Negeri 3 Bandung.</b:widget-setting>
+       <b:widget-setting name='caption'>Membentuk warga tiga yang adaptif terhadap kondisi dan teknologi.</b:widget-setting>
      </b:widget-settings>
      <b:includable id='main'>
               <b:include name='content'/>
@@ -3828,7 +3917,7 @@ height: 100%;
             </b:includable>
           </b:widget>
         </b:section>
-        <b:section id='testimonial' maxwidgets='16' name='Seksi -- 1' showaddelement='yes'>
+        <b:section class='undraggable' id='testimonial' maxwidgets='16' name='Seksi -- 1' showaddelement='yes'>
           <b:widget id='Image6' locked='true' title='Trimitra' type='Image' version='2' visible='true'>
             <b:widget-settings>
               <b:widget-setting name='displayUrl'>http://3.bp.blogspot.com/-1QxiJ8K3X7E/XqA6DP6Et7I/AAAAAAAAAeE/Y6jUDRNpb4UbruekiaPndsnxiVpobe0RgCK4BGAYYCw/s1600/Trimitra%2BHitam.png</b:widget-setting>
@@ -4046,7 +4135,7 @@ height: 100%;
             </b:includable>
           </b:widget>
         </b:section>
-        <b:section id='testimonial-2' maxwidgets='16' name='Seksi -- 2' showaddelement='yes'>
+        <b:section class='undraggable' id='testimonial-2' maxwidgets='16' name='Seksi -- 2' showaddelement='yes'>
           <b:widget id='Image14' locked='true' title='Seksi 5' type='Image' version='2' visible='true'>
             <b:widget-settings>
               <b:widget-setting name='displayUrl'>http://2.bp.blogspot.com/-vy7KzJrBQjA/XqBa2_BoFdI/AAAAAAAAAgw/cX9gdvgmyO0doPogmkA7NzXVJV-2vfbKgCK4BGAYYCw/s1600/Sie%2B5%2BHitam.png</b:widget-setting>
@@ -4156,7 +4245,7 @@ height: 100%;
             </b:includable>
           </b:widget>
         </b:section>
-        <b:section id='testimonial-3' maxwidgets='2' name='Seksi -- 3' showaddelement='yes'>
+        <b:section class='undraggable' id='testimonial-3' maxwidgets='2' name='Seksi -- 3' showaddelement='yes'>
           <b:widget id='Image40' locked='true' title='Seksi 9' type='Image' version='2' visible='true'>
             <b:widget-settings>
               <b:widget-setting name='displayUrl'>http://3.bp.blogspot.com/-jfa74D6oqFM/XqBdhb2P5AI/AAAAAAAAAhg/rpNgyLjWh_8cw5EkIUMhUzLiN15nUBCfQCK4BGAYYCw/s1600/Sie%2B9%2BHitam.png</b:widget-setting>
@@ -4227,13 +4316,13 @@ height: 100%;
       <div class='container row'>
 
       <!-- Main Wrapper -->
-      <div id='catatan-osis'>
+      <div id='jurnal-osis'>
 
         <b:if cond='data:view.isMultipleItems'> 
-          <b:section class='head-text' id='head-text1' maxwidgets='1' name='Catatan OSIS' showaddelement='no'>
-             <b:widget id='Text1' locked='true' title='Catatan OSIS' type='Text' version='2' visible='true'>
+          <b:section class='head-text' id='head-text1' maxwidgets='1' name='Jurnal OSIS' showaddelement='no'>
+             <b:widget id='Text1' locked='true' title='Jurnal OSIS' type='Text' version='2' visible='true'>
                <b:widget-settings>
-                 <b:widget-setting name='content'><![CDATA[Catatan virtual perjalanan OSIS SMA Negeri 3 Bandung<br />]]></b:widget-setting>
+                 <b:widget-setting name='content'><![CDATA[Jurnal virtual perjalanan OSIS SMA Negeri 3 Bandung<br />]]></b:widget-setting>
                </b:widget-settings>
                <b:includable id='main'>
                  <b:include name='widget-title'/>
@@ -4245,7 +4334,7 @@ height: 100%;
         </b:if>
  
         <b:section class='main' id='main' maxwidgets='1' name='Main Posts' showaddelement='yes'>
-          <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2' visible='true'>
+          <b:widget id='Blog1' locked='true' title='Postingan Blog' type='Blog' version='2' visible='true'>
             <b:widget-settings>
               <b:widget-setting name='commentLabel'>Comments</b:widget-setting>
               <b:widget-setting name='showShareButtons'>true</b:widget-setting>
@@ -5512,7 +5601,7 @@ height: 100%;
               <b:widget-setting name='text-0'>Jl. Belitung No. 8 Bandung</b:widget-setting>
               <b:widget-setting name='link-2'>fa-phone</b:widget-setting>
               <b:widget-setting name='link-0'>fa-map-marker</b:widget-setting>
-              <b:widget-setting name='text-2'>082115863629</b:widget-setting>
+              <b:widget-setting name='text-2'>089522280804</b:widget-setting>
             </b:widget-settings>
             <b:includable id='main'>
               <b:include name='widget-title'/>
@@ -5722,13 +5811,13 @@ $(function() {
         var _0xeaaax10 = $(this),
             _0xeaaax12 = _0xeaaax10['text']();
         if (_0xeaaax12['match']('left-sidebar')) {
-            _0xeaaax10['replaceWith']('<style>.item #catatan-osis{float:right}.item #sidebar-wrapper{float:left}</style>')
+            _0xeaaax10['replaceWith']('<style>.item #jurnal-osis{float:right}.item #sidebar-wrapper{float:left}</style>')
         };
         if (_0xeaaax12['match']('right-sidebar')) {
-            _0xeaaax10['replaceWith']('<style>.item #catatan-osis{float:left}.item #sidebar-wrapper{float:right}</style>')
+            _0xeaaax10['replaceWith']('<style>.item #jurnal-osis{float:left}.item #sidebar-wrapper{float:right}</style>')
         };
         if (_0xeaaax12['match']('full-width')) {
-            _0xeaaax10['replaceWith']('<style>.item #catatan-osis{width:100%}.item #sidebar-wrapper{display:none}</style>')
+            _0xeaaax10['replaceWith']('<style>.item #jurnal-osis{width:100%}.item #sidebar-wrapper{display:none}</style>')
         }
     });
     $('.common-widget .widget-content')['each'](function() {
